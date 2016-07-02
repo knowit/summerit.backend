@@ -154,7 +154,7 @@ fabric.properties
 
 # *.iml
 # modules.xml
-# .idea/misc.xml 
+# .idea/misc.xml
 # *.ipr
 
 
@@ -223,6 +223,7 @@ flycheck_*.el
 ## Build generated
 build/
 DerivedData/
+Packages/
 
 ## Various settings
 *.pbxuser
