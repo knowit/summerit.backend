@@ -56,6 +56,9 @@ GEM
     capistrano-rails (1.1.7)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
+    capistrano-rvm (0.1.2)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
     concurrent-ruby (1.0.2)
     erubis (2.7.0)
     ffi (1.9.14)
@@ -143,7 +146,9 @@ PLATFORMS
 DEPENDENCIES
   byebug
   capistrano (~> 3.4)
+  capistrano-bundler
   capistrano-rails (~> 1.1)
+  capistrano-rvm
   listen (~> 3.0.5)
   puma (~> 3.0)
   rails (~> 5.0.0)
