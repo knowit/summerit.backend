@@ -10,7 +10,9 @@ set :branch, 'rails'
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, '/var/www/summerit'
 
-set :rvm_ruby_version, '2.0.0'
+set :rvm_ruby_version, '2.3.1'
+
+set :passenger_restart_with_touch, true
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -48,4 +50,15 @@ namespace :deploy do
     end
   end
 
+end
+
+task :seed do
+ puts "\n=== Seeding Database ===\n"
+ on primary :db do
+  within current_path do
+    with rails_env: fetch(:stage) do
+      execute :rake, 'db:seed'
+    end
+  end
+ end
 end
