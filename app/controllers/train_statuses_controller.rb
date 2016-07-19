@@ -46,6 +46,6 @@ class TrainStatusesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def train_status_params
-      params.require(:train_status).permit(:rpi_id, :train_id)
+      params.require(:train_status).permit(:rpi_id, :train_id, :major, :minor, :measured_power, :rssi, :accuracy, :proximity)
     end
 end
