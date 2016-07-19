@@ -28,7 +28,7 @@ set :passenger_restart_with_touch, true
 # set :pty, true
 
 # Default value for :linked_files is []
-:linked_files, fetch(:linked_files, []).push('db/production.sqlite3')
+set :linked_files, fetch(:linked_files, []).push('db/production.sqlite3')
 
 # Default value for linked_dirs is []
 # set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system')
