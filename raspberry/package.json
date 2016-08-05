@@ -1,0 +1,27 @@
+{
+  "name": "raspberry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "agent.js",
+  "dependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-2": "^6.11.0",
+    "es6-promise": "^3.2.1",
+    "isomorphic-fetch": "^2.2.1",
+    "node-fetch": "^1.5.3"
+  },
+  "devDependencies": {
+    "bleacon": "^0.4.0",
+    "nodemon": "^1.10.0"
+  },
+  "scripts": {
+    "start": "nodemon lib/agent.js --exec babel-node",
+    "build": "babel lib -d dist",
+    "serve": "node dist/agent.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
